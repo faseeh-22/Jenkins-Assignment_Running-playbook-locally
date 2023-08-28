@@ -2,6 +2,7 @@
 Create a jenkins job that runs a shell script locally, in that shell script run an ansible playbook to start nginx server. To complete the assignment follow the below steps.
  
 
+
 ## Prerequisites:
  
 **1. Jenkins Server:** Make sure you have a Jenkins server up and running. You should have administrative access to Jenkins.
@@ -72,6 +73,7 @@ Create a file named `invent.ini` in the same directory as your Jenkins job's pip
 **Step4. Save and Build**
  
 **1. Save:** Save the Jenkins job configuration.
+
 **2. Build Job:** Click on "Build Now" to trigger the Jenkins job.
  
 **Step5. Verify the Deployment**
