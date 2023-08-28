@@ -55,7 +55,7 @@ pipeline {
                     	ansible-playbook -b -i invent.ini nginx.yml
                 	'''
             	}
-        	}
+        }
     	}
     }
 }
