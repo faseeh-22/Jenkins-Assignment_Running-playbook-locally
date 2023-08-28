@@ -45,20 +45,20 @@ Create a file named `nginx.yml` with the following content. This playbook will i
 ``` 
 pipeline {
     agent any
- 
+
     stages {
-    	stage('Run playbook') {
-        	steps {
-            	script {
-                	sh '''
-                    	cd /path/to/playbook/directory
-                    	ansible-playbook -b -i invent.ini nginx.yml
-                	'''
-            	}
-          }
-       }
+        stage('Run playbook') {
+            steps {
+                script {
+                    sh '''
+                        cd /home/faseeh
+                        ansible-playbook -b -i invent.ini nginx.yml
+                    '''
+                }
+            }
+        }
     }
- }
+}
 ``` 
  
 Replace `/path/to/playbook/directory` with the actual path to the directory where your `nginx.yml` playbook is located.
