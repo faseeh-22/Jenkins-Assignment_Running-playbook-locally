@@ -55,10 +55,10 @@ pipeline {
                     	ansible-playbook -b -i invent.ini nginx.yml
                 	'''
             	}
-        }
-    	}
+          }
+       }
     }
-}
+ }
 ``` 
  
 Replace `/path/to/playbook/directory` with the actual path to the directory where your `nginx.yml` playbook is located.
