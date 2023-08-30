@@ -13,7 +13,8 @@ Create a jenkins job that runs a shell script locally, in that shell script run 
 
 ## Steps
  
- **Step1. Create an Ansible Playbook** 
+ **Step1. Create an Ansible Playbook:** 
+
 Create a file named `nginx.yml` with the following content. This playbook will install and start the Nginx server on the localhost.
 ``` 
 - hosts: localhost
@@ -30,7 +31,7 @@ Create a file named `nginx.yml` with the following content. This playbook will i
     	name: nginx
     	state: started
  ```
-**Step2. Set Up the Jenkins Job**
+**Step2. Set Up the Jenkins Job:**
  
 **1. Log in to Jenkins:** Open your Jenkins dashboard and log in with administrative credentials.
  
@@ -64,19 +65,21 @@ pipeline {
  
 Replace `/path/to/playbook/directory` with the actual path to the directory where your `nginx.yml` playbook is located.
  
-**Step3. Create an Inventory File**
+**Step3. Create an Inventory File:**
+
 Create a file named `invent.ini` in the same directory as your Jenkins job's pipeline script. This inventory file specifies the target host for the Ansible playbook.
 ``` 
  [localhost]
 127.0.0.1 ansible_connection=local
 ``` 
-**Step4. Save and Build**
+**Step4. Save and Build:**
  
 **1. Save:** Save the Jenkins job configuration.
 
 **2. Build Job:** Click on "Build Now" to trigger the Jenkins job.
  
-**Step5. Verify the Deployment**
+**Step5. Verify the Deployment:**
+
 Once the Jenkins job completes successfully, the Nginx web server should be installed and started on the localhost. You can verify this by accessing the Nginx default page using a web browser.
  
  
